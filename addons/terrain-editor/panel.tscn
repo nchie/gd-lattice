@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://chso4c4o5ef7q"]
+
+[ext_resource type="Script" path="res://addons/terrain-editor/panel.gd" id="1_5qw25"]
+
+[node name="HBoxContainer" type="HBoxContainer"]
+anchor_right = 0.233
+anchor_bottom = 1.0
+offset_right = 0.40799
+script = ExtResource( "1_5qw25" )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+offset_right = 129.0
+offset_bottom = 600.0
+text = "Example button"
+__meta__ = {
+"_edit_use_anchors_": false
+}
