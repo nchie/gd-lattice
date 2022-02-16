@@ -8,6 +8,7 @@ var panel
 func _enter_tree():
 	# Initialization of the plugin goes here.
 	panel = panelScene.instantiate()
+	add_import_plugin()
 	add_control_to_bottom_panel(panel, "Terrain")
 
 func _exit_tree():

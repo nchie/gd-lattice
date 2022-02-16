@@ -1,0 +1,6 @@
+[configuration]
+entry_symbol = "example_library_init"
+
+[libraries]
+windows.64 = "res://native/target/debug/native.dll"
+macos.debug = "gridworld.framework"
