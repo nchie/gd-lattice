@@ -20,7 +20,7 @@ SET(CMAKE_ARCHIVE_OUTPUT_DIRECTORY_RELEASE "${BUILD_PATH}")
 
 
 file(GLOB_RECURSE SOURCES src/*.c**)
-file(GLOB_RECURSE HEADERS include/*.h**)
+file(GLOB_RECURSE HEADERS src/*.h**)
 
 add_library(${PROJECT_NAME} SHARED ${SOURCES} ${HEADERS})
 target_link_libraries(${PROJECT_NAME} ${GODOT_CPP})

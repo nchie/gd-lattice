@@ -37,12 +37,16 @@
 #include <godot_cpp/godot.hpp>
 
 #include "example.h"
+#include "terrain_palette.h"
 
 using namespace godot;
 
 void register_example_types() {
 	ClassDB::register_class<ExampleRef>();
 	ClassDB::register_class<Example>();
+
+    ClassDB::register_class<TerrainPaletteRef>();
+    ClassDB::register_class<TerrainPalette>();
 }
 
 void unregister_example_types() {}
