@@ -1,5 +1,5 @@
-#ifndef TERRAIN_PALETTE_CLASS_H
-#define TERRAIN_PALETTE_CLASS_H
+#ifndef TERRAIN_DATA_CLASS_H
+#define TERRAIN_DATA_CLASS_H
 
 // We don't need windows.h in this plugin but many others do and it throws up on itself all the time
 // So best to include it and make sure CI warns us when we use something Microsoft took for their own goals....
@@ -12,40 +12,41 @@
 #include <godot_cpp/classes/viewport.hpp>
 
 #include <godot_cpp/core/binder_common.hpp>
-#include "terrain_data.h"
 
 using namespace godot;
 
 
-class TerrainPaletteRef : public RefCounted {
-GDCLASS(TerrainPaletteRef, RefCounted);
+class TerrainDataRef : public RefCounted {
+GDCLASS(TerrainDataRef, RefCounted);
 
 protected:
     static void _bind_methods() {}
 
 public:
-    TerrainPaletteRef();
-    ~TerrainPaletteRef();
+    TerrainDataRef();
+    ~TerrainDataRef();
 };
 
 
-class TerrainPalette : public Resource {
-	GDCLASS(TerrainPalette, Resource);
+class TerrainData : public Resource {
+	GDCLASS(TerrainData, Resource);
 
 protected:
 	static void _bind_methods();
 
 private:
+	Vector2 custom_position;
 
 public:
-    TerrainPalette();
-    ~TerrainPalette();
+    TerrainData();
+    ~TerrainData();
 
 	// Constants.
 
 	// Functions.
 
 	// Property.
+
 };
 
 #endif

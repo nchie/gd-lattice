@@ -23,7 +23,6 @@ file(GLOB_RECURSE SOURCES src/*.c**)
 file(GLOB_RECURSE HEADERS src/*.h**)
 
 add_library(${PROJECT_NAME} SHARED ${SOURCES} ${HEADERS})
-target_link_libraries(${PROJECT_NAME} ${GODOT_CPP})
 target_compile_definitions(${PROJECT_NAME} PRIVATE -DDEBUG_ENABLED -DDEBUG_METHODS_ENABLED)
 set_target_properties(${PROJECT_NAME} PROPERTIES
         FRAMEWORK TRUE
