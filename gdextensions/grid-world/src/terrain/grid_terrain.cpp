@@ -33,16 +33,16 @@ void GridTerrain::_bind_methods() {
 }
 
 GridTerrain::GridTerrain() {
-    UtilityFunctions::print("Constructor ran!");
+    UtilityFunctions::print("GridTerrain constructor.");
 }
 
 GridTerrain::~GridTerrain() {
-    UtilityFunctions::print("Destructoar.");
+    UtilityFunctions::print("GridTerrain destructor.");
 }
 
 // Methods.
-void GridTerrain::set_terrain_data(const Ref<TerrainData> &terrain_data) {
-    this->terrain_data = terrain_data;
+void GridTerrain::set_terrain_data(const Ref<TerrainData> &p_terrain_data) {
+    this->terrain_data = p_terrain_data;
 }
 
 Ref<TerrainData> GridTerrain::get_terrain_data() const {

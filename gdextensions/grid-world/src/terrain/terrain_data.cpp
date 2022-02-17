@@ -27,11 +27,11 @@ void TerrainData::_bind_methods() {
 }
 
 TerrainData::TerrainData() {
-    UtilityFunctions::print("Constructor ran!");
+    UtilityFunctions::print("TerrainData constructor.");
 }
 
 TerrainData::~TerrainData() {
-    UtilityFunctions::print("Destructoar.");
+    UtilityFunctions::print("TerrainData destructor.");
 }
 
 // Methods.
