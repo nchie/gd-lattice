@@ -30,10 +30,10 @@ public:
 
 
 class TerrainPalette : public Resource {
-	GDCLASS(TerrainPalette, Resource);
+    GDCLASS(TerrainPalette, Resource);
 
 protected:
-	static void _bind_methods();
+    static void _bind_methods();
 
 private:
 
@@ -41,11 +41,11 @@ public:
     TerrainPalette();
     ~TerrainPalette();
 
-	// Constants.
+    // Constants.
 
-	// Functions.
+    // Functions.
 
-	// Property.
+    // Property.
 };
 
 #endif

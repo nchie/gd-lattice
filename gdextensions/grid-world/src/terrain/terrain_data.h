@@ -29,10 +29,10 @@ public:
 
 
 class TerrainData : public Resource {
-	GDCLASS(TerrainData, Resource);
+    GDCLASS(TerrainData, Resource);
 
 protected:
-	static void _bind_methods();
+    static void _bind_methods();
 
 private:
 
@@ -40,11 +40,11 @@ public:
     TerrainData();
     ~TerrainData();
 
-	// Constants.
+    // Constants.
 
-	// Functions.
+    // Functions.
 
-	// Property.
+    // Property.
 
 };
 

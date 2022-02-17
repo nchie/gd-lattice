@@ -17,21 +17,21 @@ TerrainDataRef::~TerrainDataRef() {
 }
 
 void TerrainData::_bind_methods() {
-	// Methods.
+    // Methods.
 
-	// Properties.
+    // Properties.
 
-	// Signals.
+    // Signals.
 
-	// Constants.
+    // Constants.
 }
 
 TerrainData::TerrainData() {
-	UtilityFunctions::print("Constructor ran!");
+    UtilityFunctions::print("Constructor ran!");
 }
 
 TerrainData::~TerrainData() {
-	UtilityFunctions::print("Destructoar.");
+    UtilityFunctions::print("Destructoar.");
 }
 
 // Methods.

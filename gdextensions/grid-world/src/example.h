@@ -46,58 +46,58 @@
 using namespace godot;
 
 class ExampleRef : public RefCounted {
-	GDCLASS(ExampleRef, RefCounted);
+    GDCLASS(ExampleRef, RefCounted);
 
 protected:
-	static void _bind_methods() {}
+    static void _bind_methods() {}
 
 public:
-	ExampleRef();
-	~ExampleRef();
+    ExampleRef();
+    ~ExampleRef();
 };
 
 class Example : public Control {
-	GDCLASS(Example, Control);
+    GDCLASS(Example, Control);
 
 protected:
-	static void _bind_methods();
+    static void _bind_methods();
 
 private:
-	Vector2 custom_position;
+    Vector2 custom_position;
 
 public:
-	// Constants.
-	enum Constants {
-		FIRST,
-		ANSWER_TO_EVERYTHING = 42,
-	};
+    // Constants.
+    enum Constants {
+        FIRST,
+        ANSWER_TO_EVERYTHING = 42,
+    };
 
-	enum {
-		CONSTANT_WITHOUT_ENUM = 314,
-	};
+    enum {
+        CONSTANT_WITHOUT_ENUM = 314,
+    };
 
-	Example();
-	~Example();
+    Example();
+    ~Example();
 
-	// Functions.
-	void simple_func();
-	void simple_const_func() const;
-	String return_something(const String &base);
-	Viewport *return_something_const() const;
-	ExampleRef *return_extended_ref() const;
-	Ref<ExampleRef> extended_ref_checks(Ref<ExampleRef> p_ref) const;
-	Variant varargs_func(const Variant **args, GDNativeInt arg_count, GDNativeCallError &error);
-	void emit_custom_signal(const String &name, int value);
+    // Functions.
+    void simple_func();
+    void simple_const_func() const;
+    String return_something(const String &base);
+    Viewport *return_something_const() const;
+    ExampleRef *return_extended_ref() const;
+    Ref<ExampleRef> extended_ref_checks(Ref<ExampleRef> p_ref) const;
+    Variant varargs_func(const Variant **args, GDNativeInt arg_count, GDNativeCallError &error);
+    void emit_custom_signal(const String &name, int value);
 
-	Array test_array() const;
-	Dictionary test_dictionary() const;
+    Array test_array() const;
+    Dictionary test_dictionary() const;
 
-	// Property.
-	void set_custom_position(const Vector2 &pos);
-	Vector2 get_custom_position() const;
+    // Property.
+    void set_custom_position(const Vector2 &pos);
+    Vector2 get_custom_position() const;
 
-	// Virtual function override (no need to bind manually).
-	virtual bool _has_point(const Vector2 &point) const override;
+    // Virtual function override (no need to bind manually).
+    virtual bool _has_point(const Vector2 &point) const override;
 };
 
 VARIANT_ENUM_CAST(Example, Constants);

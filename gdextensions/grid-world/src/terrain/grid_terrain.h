@@ -17,30 +17,30 @@
 using namespace godot;
 
 class GridTerrainRef : public RefCounted {
-	GDCLASS(GridTerrainRef, RefCounted);
+    GDCLASS(GridTerrainRef, RefCounted);
 
 protected:
-	static void _bind_methods() {}
+    static void _bind_methods() {}
 
 public:
-	GridTerrainRef();
-	~GridTerrainRef();
+    GridTerrainRef();
+    ~GridTerrainRef();
 };
 
 class GridTerrain : public Node3D {
-	GDCLASS(GridTerrain, Node3D);
+    GDCLASS(GridTerrain, Node3D);
 
 protected:
-	static void _bind_methods();
+    static void _bind_methods();
 
 private:
     Ref<TerrainData> terrain_data;
 
 public:
-	GridTerrain();
-	~GridTerrain();
+    GridTerrain();
+    ~GridTerrain();
 
-	// Functions.
+    // Functions.
     void set_terrain_data(const Ref<TerrainData> &terrain_data);
     Ref<TerrainData> get_terrain_data() const;
 };

@@ -17,21 +17,21 @@ TerrainPaletteRef::~TerrainPaletteRef() {
 }
 
 void TerrainPalette::_bind_methods() {
-	// Methods.
+    // Methods.
 
-	// Properties.
+    // Properties.
 
-	// Signals.
+    // Signals.
 
-	// Constants.
+    // Constants.
 }
 
 TerrainPalette::TerrainPalette() {
-	UtilityFunctions::print("TerrainPalette constructor.");
+    UtilityFunctions::print("TerrainPalette constructor.");
 }
 
 TerrainPalette::~TerrainPalette() {
-	UtilityFunctions::print("TerrainPalette Destructor.");
+    UtilityFunctions::print("TerrainPalette Destructor.");
 }
 
 // Methods.
