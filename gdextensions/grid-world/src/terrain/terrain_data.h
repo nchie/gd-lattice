@@ -35,7 +35,6 @@ protected:
 	static void _bind_methods();
 
 private:
-	Vector2 custom_position;
 
 public:
     TerrainData();

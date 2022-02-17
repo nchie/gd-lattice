@@ -9,11 +9,11 @@
 using namespace godot;
 
 GridTerrainRef::GridTerrainRef() {
-	UtilityFunctions::print("ExampleRef created.");
+	UtilityFunctions::print("GridTerrainRef created.");
 }
 
 GridTerrainRef::~GridTerrainRef() {
-	UtilityFunctions::print("ExampleRef destroyed.");
+	UtilityFunctions::print("GridTerrainRef destroyed.");
 }
 
 void GridTerrain::_bind_methods() {
