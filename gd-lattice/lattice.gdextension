@@ -1,0 +1,11 @@
+[configuration]
+entry_symbol = "init"
+
+[libraries]
+linux.64.debug = "bin/liblattice.debug.dll"
+linux.64.release = "bin/liblattice.release.dll"
+windows.64.debug = "bin/lattice.debug.dll"
+windows.64.release = "bin/lattice.release.dll"
+macos.debug = "bin/lattice.debug.framework"
+macos.release = "bin/lattice.release.framework"
+

@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://da07hy6s17d1x"]
+
+[ext_resource type="Script" path="res://terrain/GridTerrain.gd" id="1_eght6"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_48lrs"]
+sky_top_color = Color(0.568627, 0.698039, 0.807843, 1)
+sky_horizon_color = Color(0.672549, 0.704902, 0.734314, 1)
+ground_bottom_color = Color(0.121569, 0.121569, 0.129412, 1)
+ground_horizon_color = Color(0.672549, 0.704902, 0.734314, 1)
+
+[sub_resource type="Sky" id="Sky_ku28n"]
+sky_material = SubResource( "ProceduralSkyMaterial_48lrs" )
+
+[sub_resource type="Environment" id="Environment_stowi"]
+background_mode = 2
+sky = SubResource( "Sky_ku28n" )
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="World" type="Node3D"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(0.85819, 0, -0.513332, 0, 1, 0, 0.513332, 0, 0.85819, 0, 1.11242, -2.44852)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( "Environment_stowi" )
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+light_color = Color(1, 1, 0.419608, 1)
+shadow_enabled = true
+directional_shadow_max_distance = 250.0
+
+[node name="GridTerrain" type="GridTerrain" parent="."]
+script = ExtResource( "1_eght6" )
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.963514, 0.267659, 0, -0.267659, 0.963514, 0, 2.42441, 3.13369)
