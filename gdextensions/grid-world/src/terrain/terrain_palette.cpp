@@ -8,14 +8,6 @@
 
 using namespace godot;
 
-TerrainPaletteRef::TerrainPaletteRef() {
-    UtilityFunctions::print("TerrainPaletteRef created.");
-}
-
-TerrainPaletteRef::~TerrainPaletteRef() {
-    UtilityFunctions::print("TerrainPaletteRef destroyed.");
-}
-
 void TerrainPalette::_bind_methods() {
     // Methods.
 

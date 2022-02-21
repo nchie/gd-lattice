@@ -15,19 +15,6 @@
 
 using namespace godot;
 
-
-class TerrainDataRef : public RefCounted {
-GDCLASS(TerrainDataRef, RefCounted);
-
-protected:
-    static void _bind_methods() {}
-
-public:
-    TerrainDataRef();
-    ~TerrainDataRef();
-};
-
-
 class TerrainData : public Resource {
     GDCLASS(TerrainData, Resource);
 

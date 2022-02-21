@@ -8,14 +8,6 @@
 
 using namespace godot;
 
-TerrainDataRef::TerrainDataRef() {
-    UtilityFunctions::print("TerrainDataRef created.");
-}
-
-TerrainDataRef::~TerrainDataRef() {
-    UtilityFunctions::print("TerrainDataRef destroyed.");
-}
-
 void TerrainData::_bind_methods() {
     // Methods.
 

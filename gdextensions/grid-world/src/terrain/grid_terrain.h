@@ -16,17 +16,6 @@
 
 using namespace godot;
 
-class GridTerrainRef : public RefCounted {
-    GDCLASS(GridTerrainRef, RefCounted);
-
-protected:
-    static void _bind_methods() {}
-
-public:
-    GridTerrainRef();
-    ~GridTerrainRef();
-};
-
 class GridTerrain : public Node3D {
     GDCLASS(GridTerrain, Node3D);
 
@@ -34,7 +23,7 @@ protected:
     static void _bind_methods();
 
 private:
-    Ref<TerrainData> terrain_data;
+    Ref<TerrainData> _terrain_data;
 
 public:
     GridTerrain();

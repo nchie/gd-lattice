@@ -12,28 +12,22 @@
 
 using namespace godot;
 
-void register_example_types() {
-    ClassDB::register_class<GridTerrainRef>();
-    ClassDB::register_class<GridTerrain>();
-
-    ClassDB::register_class<TerrainPaletteRef>();
-    ClassDB::register_class<TerrainPalette>();
-
-    ClassDB::register_class<TerrainDataRef>();
+void register_types() {
     ClassDB::register_class<TerrainData>();
+    ClassDB::register_class<GridTerrain>();
+    ClassDB::register_class<TerrainPalette>();
 }
 
-void unregister_example_types() {}
+void unregister_types() {}
 
 extern "C" {
 
 // Initialization.
-
 GDNativeBool GDN_EXPORT init(const GDNativeInterface *p_interface, const GDNativeExtensionClassLibraryPtr p_library, GDNativeInitialization *r_initialization) {
     godot::GDExtensionBinding::InitObject init_obj(p_interface, p_library, r_initialization);
 
-    init_obj.register_scene_initializer(register_example_types);
-    init_obj.register_scene_terminator(unregister_example_types);
+    init_obj.register_scene_initializer(register_types);
+    init_obj.register_scene_terminator(unregister_types);
 
     return init_obj.init();
 }
