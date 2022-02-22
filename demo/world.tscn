@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://da07hy6s17d1x"]
+[gd_scene load_steps=6 format=3 uid="uid://da07hy6s17d1x"]
 
-[ext_resource type="Script" path="res://terrain/GridTerrain.gd" id="1_eght6"]
+[ext_resource type="PackedScene" uid="uid://chka76yp61niw" path="res://terrain/PlaceholderTerrain.tscn" id="1_d31ss"]
+[ext_resource type="PackedScene" uid="uid://dloykhjq0gs1j" path="res://characters/player/Player.tscn" id="2_4duq5"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_48lrs"]
 sky_top_color = Color(0.568627, 0.698039, 0.807843, 1)
@@ -15,12 +16,11 @@ sky_material = SubResource( "ProceduralSkyMaterial_48lrs" )
 background_mode = 2
 sky = SubResource( "Sky_ku28n" )
 tonemap_mode = 2
+ssao_enabled = true
+ssil_enabled = true
 glow_enabled = true
 
 [node name="World" type="Node3D"]
-
-[node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(0.85819, 0, -0.513332, 0, 1, 0, 0.513332, 0, 0.85819, 0, 1.11242, -2.44852)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( "Environment_stowi" )
@@ -31,8 +31,11 @@ light_color = Color(1, 1, 0.419608, 1)
 shadow_enabled = true
 directional_shadow_max_distance = 250.0
 
-[node name="GridTerrain" type="GridTerrain" parent="."]
-script = ExtResource( "1_eght6" )
+[node name="PlaceholderTerrain" parent="." instance=ExtResource( "1_d31ss" )]
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="Player" parent="." instance=ExtResource( "2_4duq5" )]
+
+[node name="Camera3D" type="Camera3D" parent="Player"]
 transform = Transform3D(1, 0, 0, 0, 0.963514, 0.267659, 0, -0.267659, 0.963514, 0, 2.42441, 3.13369)
+
+[node name="GridTerrain" type="GridTerrain" parent="."]
