@@ -13,9 +13,9 @@
 using namespace godot;
 
 void register_types() {
-    ClassDB::register_class<TerrainStream>();
-    ClassDB::register_class<GridTerrain>();
-    ClassDB::register_class<TerrainPalette>();
+    ClassDB::register_class<lattice::TerrainStream>();
+    ClassDB::register_class<lattice::GridTerrain>();
+    ClassDB::register_class<lattice::TerrainPalette>();
 }
 
 void unregister_types() {}

@@ -11,12 +11,16 @@
 
 #include <godot_cpp/core/binder_common.hpp>
 #include "terrain_stream.h"
-#include "terrain_mesh_map.h"
+#include "terrain_chunk_map.h"
 
 using namespace godot;
 
+
+namespace lattice {
+
+
 class GridTerrain : public Node3D {
-    GDCLASS(GridTerrain, Node3D);
+GDCLASS(GridTerrain, Node3D);
 
 protected:
     static void _bind_methods();
@@ -30,17 +34,23 @@ private:
 
 public:
     GridTerrain();
+
     ~GridTerrain();
 
     // Functions.
     void set_terrain_stream(const Ref<TerrainStream> &p_terrain_stream);
+
     Ref<TerrainStream> get_terrain_stream() const;
 
     void set_collision_layer(uint32_t p_collision_layer);
+
     uint32_t get_collision_layer() const;
 
     void set_collision_mask(uint32_t p_collision_mask);
+
     uint32_t get_collision_mask() const;
 };
+
+}
 
 #endif

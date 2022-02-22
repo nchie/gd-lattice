@@ -13,8 +13,12 @@
 
 using namespace godot;
 
+
+namespace lattice {
+
+
 class TerrainStream : public Resource {
-    GDCLASS(TerrainStream, Resource);
+GDCLASS(TerrainStream, Resource);
 
 protected:
     static void _bind_methods();
@@ -23,6 +27,7 @@ private:
 
 public:
     TerrainStream();
+
     ~TerrainStream();
 
     // Constants.
@@ -32,5 +37,7 @@ public:
     // Property.
 
 };
+
+}
 
 #endif

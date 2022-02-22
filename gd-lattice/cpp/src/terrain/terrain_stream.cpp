@@ -8,6 +8,10 @@
 
 using namespace godot;
 
+
+namespace lattice {
+
+
 void TerrainStream::_bind_methods() {
     // Methods.
 
@@ -27,3 +31,5 @@ TerrainStream::~TerrainStream() {
 }
 
 // Methods.
+
+}

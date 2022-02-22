@@ -14,8 +14,11 @@
 
 using namespace godot;
 
+namespace lattice {
+
+
 class TerrainPalette : public Resource {
-    GDCLASS(TerrainPalette, Resource);
+GDCLASS(TerrainPalette, Resource);
 
 protected:
     static void _bind_methods();
@@ -24,6 +27,7 @@ private:
 
 public:
     TerrainPalette();
+
     ~TerrainPalette();
 
     // Constants.
@@ -32,5 +36,7 @@ public:
 
     // Property.
 };
+
+}
 
 #endif

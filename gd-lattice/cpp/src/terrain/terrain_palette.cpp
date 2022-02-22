@@ -8,6 +8,10 @@
 
 using namespace godot;
 
+
+namespace lattice {
+
+
 void TerrainPalette::_bind_methods() {
     // Methods.
 
@@ -29,3 +33,5 @@ TerrainPalette::~TerrainPalette() {
 // Methods.
 
 // Properties.
+
+}
