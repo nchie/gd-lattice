@@ -19,6 +19,7 @@ class TerrainChunk {
     };
 
 };
+
 }
 
 #endif //LATTICE_TERRAIN_CHUNK_H
