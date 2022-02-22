@@ -1,18 +1,17 @@
+//
+// Created by André Terranchie on 2022-02-22.
+//
+
 #ifndef GRID_TERRAIN_CLASS_H
 #define GRID_TERRAIN_CLASS_H
-
-// We don't need windows.h in this plugin but many others do and it throws up on itself all the time
-// So best to include it and make sure CI warns us when we use something Microsoft took for their own goals....
-#ifdef WIN32
-#include <windows.h>
-#endif
 
 #include <godot_cpp/classes/node3d.hpp>
 #include <godot_cpp/classes/global_constants.hpp>
 #include <godot_cpp/classes/viewport.hpp>
 
 #include <godot_cpp/core/binder_common.hpp>
-#include "terrain_data.h"
+#include "terrain_stream.h"
+#include "terrain_mesh_map.h"
 
 using namespace godot;
 
@@ -23,15 +22,25 @@ protected:
     static void _bind_methods();
 
 private:
-    Ref<TerrainData> _terrain_data;
+    TerrainChunkMap _terrain_chunk_map;
+
+    Ref<TerrainStream> _terrain_stream;
+    uint32_t _collision_layer = 1;
+    uint32_t _collision_mask = 1;
 
 public:
     GridTerrain();
     ~GridTerrain();
 
     // Functions.
-    void set_terrain_data(const Ref<TerrainData> &terrain_data);
-    Ref<TerrainData> get_terrain_data() const;
+    void set_terrain_stream(const Ref<TerrainStream> &p_terrain_stream);
+    Ref<TerrainStream> get_terrain_stream() const;
+
+    void set_collision_layer(uint32_t p_collision_layer);
+    uint32_t get_collision_layer() const;
+
+    void set_collision_mask(uint32_t p_collision_mask);
+    uint32_t get_collision_mask() const;
 };
 
 #endif

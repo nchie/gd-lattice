@@ -8,12 +8,12 @@
 
 #include "terrain/grid_terrain.h"
 #include "terrain/terrain_palette.h"
-#include "terrain/terrain_data.h"
+#include "terrain/terrain_stream.h"
 
 using namespace godot;
 
 void register_types() {
-    ClassDB::register_class<TerrainData>();
+    ClassDB::register_class<TerrainStream>();
     ClassDB::register_class<GridTerrain>();
     ClassDB::register_class<TerrainPalette>();
 }

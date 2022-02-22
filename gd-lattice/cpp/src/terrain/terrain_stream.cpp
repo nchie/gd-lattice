@@ -1,4 +1,4 @@
-#include "terrain_data.h"
+#include "terrain_stream.h"
 
 #include <godot_cpp/core/class_db.hpp>
 
@@ -8,7 +8,7 @@
 
 using namespace godot;
 
-void TerrainData::_bind_methods() {
+void TerrainStream::_bind_methods() {
     // Methods.
 
     // Properties.
@@ -18,12 +18,12 @@ void TerrainData::_bind_methods() {
     // Constants.
 }
 
-TerrainData::TerrainData() {
-    UtilityFunctions::print("TerrainData constructor.");
+TerrainStream::TerrainStream() {
+    UtilityFunctions::print("TerrainStream constructor.");
 }
 
-TerrainData::~TerrainData() {
-    UtilityFunctions::print("TerrainData destructor.");
+TerrainStream::~TerrainStream() {
+    UtilityFunctions::print("TerrainStream destructor.");
 }
 
 // Methods.

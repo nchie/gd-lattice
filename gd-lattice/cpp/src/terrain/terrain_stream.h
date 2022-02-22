@@ -2,20 +2,19 @@
 // Created by André Terranchie on 2022-02-22.
 //
 
-#ifndef TERRAIN_PALETTE_CLASS_H
-#define TERRAIN_PALETTE_CLASS_H
+#ifndef TERRAIN_STREAM_CLASS_H
+#define TERRAIN_STREAM_CLASS_H
 
 #include <godot_cpp/classes/resource.hpp>
 #include <godot_cpp/classes/global_constants.hpp>
 #include <godot_cpp/classes/viewport.hpp>
 
 #include <godot_cpp/core/binder_common.hpp>
-#include "terrain_stream.h"
 
 using namespace godot;
 
-class TerrainPalette : public Resource {
-    GDCLASS(TerrainPalette, Resource);
+class TerrainStream : public Resource {
+    GDCLASS(TerrainStream, Resource);
 
 protected:
     static void _bind_methods();
@@ -23,14 +22,15 @@ protected:
 private:
 
 public:
-    TerrainPalette();
-    ~TerrainPalette();
+    TerrainStream();
+    ~TerrainStream();
 
     // Constants.
 
     // Functions.
 
     // Property.
+
 };
 
 #endif
