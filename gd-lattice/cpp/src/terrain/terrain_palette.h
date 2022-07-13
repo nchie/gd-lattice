@@ -5,37 +5,49 @@
 #ifndef TERRAIN_PALETTE_CLASS_H
 #define TERRAIN_PALETTE_CLASS_H
 
-#include <godot_cpp/classes/resource.hpp>
-#include <godot_cpp/classes/global_constants.hpp>
-#include <godot_cpp/classes/viewport.hpp>
+#include <godot_cpp/core/object.hpp>
+#include <godot_cpp/classes/mesh.hpp>
+#include <godot_cpp/variant/array.hpp>
+#include <godot_cpp/variant/string_name.hpp>
+#include <godot_cpp/variant/variant.hpp>
+#include <godot_cpp/templates/list.hpp>
+#include <unordered_map>
 
-#include <godot_cpp/core/binder_common.hpp>
 #include "terrain_stream.h"
-
-using namespace godot;
+#include "terrain_type.h"
 
 namespace lattice {
 
 
-class TerrainPalette : public Resource {
-GDCLASS(TerrainPalette, Resource);
+class TerrainPalette : public godot::Resource {
+    GDCLASS(TerrainPalette, Resource);
+
+    std::unordered_map<size_t, TerrainType> _terrain_types;
 
 protected:
-    static void _bind_methods();
+    bool _set(const godot::StringName &p_name, const godot::Variant &p_value);
+    bool _get(const godot::StringName &p_name, godot::Variant &r_ret) const;
+    void _get_property_list(godot::List<godot::PropertyInfo> *p_list) const;
 
-private:
+    void set(const godot::StringName &p_name, const godot::Variant &p_value);
+    godot::Variant get(const godot::StringName &p_name) const;
+    godot::Array get_property_list() const;
+
+    static void _bind_methods();
 
 public:
     TerrainPalette();
-
     ~TerrainPalette();
-
-    // Constants.
 
     // Functions.
 
+    void create_terrain_type();
+
     // Property.
 };
+
+
+godot::Array convert_property_list(const godot::List<godot::PropertyInfo> *p_list);
 
 }
 

@@ -36,7 +36,7 @@ SET(CMAKE_ARCHIVEOUTPUT_DIRECTORY_RELEASE "${BUILD_PATH}")
 file(GLOB_RECURSE SOURCES src/*.c**)
 file(GLOB_RECURSE HEADERS src/*.h**)
 
-add_library(${PROJECT_NAME} SHARED ${SOURCES} ${HEADERS} src/terrain/terrain_chunk_map.cpp src/terrain/terrain_chunk_map.h src/core/math/chunk_key.h src/terrain/terrain_chunk.cpp src/terrain/terrain_chunk.h)
+add_library(${PROJECT_NAME} SHARED ${SOURCES} ${HEADERS} src/terrain/terrain_chunk_map.cpp src/terrain/terrain_chunk_map.h src/core/math/chunk_key.h src/terrain/terrain_chunk.cpp src/terrain/terrain_chunk.h src/terrain/terrain_type.cpp src/terrain/terrain_type.h)
 target_compile_definitions(${PROJECT_NAME} PRIVATE -DDEBUG_ENABLED -DDEBUG_METHODS_ENABLED)
 set_target_properties(${PROJECT_NAME} PROPERTIES
         FRAMEWORK TRUE

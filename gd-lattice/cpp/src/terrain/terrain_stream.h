@@ -11,19 +11,14 @@
 
 #include <godot_cpp/core/binder_common.hpp>
 
-using namespace godot;
-
-
 namespace lattice {
 
 
-class TerrainStream : public Resource {
+class TerrainStream : public godot::Resource {
 GDCLASS(TerrainStream, Resource);
 
 protected:
     static void _bind_methods();
-
-private:
 
 public:
     TerrainStream();

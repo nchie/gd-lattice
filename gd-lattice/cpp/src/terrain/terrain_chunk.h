@@ -12,8 +12,7 @@ namespace lattice {
 
 
 class TerrainChunk {
-
-    struct MultimeshInstance {
+    struct MeshInstance {
         godot::RID instance;
         godot::RID multimesh;
     };

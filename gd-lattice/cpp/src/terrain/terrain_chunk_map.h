@@ -30,7 +30,6 @@ public:
             _chunk_index_map(),
             _terrain_chunks() {
     }
-
 };
 
 }
