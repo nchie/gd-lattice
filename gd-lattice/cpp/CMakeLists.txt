@@ -3,7 +3,7 @@ project(lattice)
 
 set(CMAKE_CXX_STANDARD 20)
 
-set(GODOT_HEADERS_PATH  ../../../godot-headers/)
+set(GODOT_HEADERS_PATH  ../../../godot-cpp/godot-headers/)
 set(CPP_BINDINGS_PATH ../../../godot-cpp)
 
 string(TOLOWER ${CMAKE_SYSTEM_NAME} SYSTEM_NAME)
