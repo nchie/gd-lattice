@@ -20,10 +20,10 @@ void GridTerrain::_bind_methods() {
     ADD_GROUP("Test group", "group_");
     ADD_SUBGROUP("Test subgroup", "group_subgroup_");
 
-    ClassDB::bind_method(D_METHOD("get_terrain_stream"), &GridTerrain::get_terrain_stream);
-    ClassDB::bind_method(D_METHOD("set_terrain_stream", "terrain_stream"), &GridTerrain::set_terrain_stream);
+    ClassDB::bind_method(D_METHOD("get_terrain_palette"), &GridTerrain::get_terrain_stream);
+    ClassDB::bind_method(D_METHOD("set_terrain_palette", "terrain_stream"), &GridTerrain::set_terrain_stream);
     ADD_PROPERTY(PropertyInfo(Variant::OBJECT, "terrain_stream", godot::PROPERTY_HINT_RESOURCE_TYPE,
-                              TerrainStream::get_class_static()), "set_terrain_stream", "get_terrain_stream");
+                              TerrainStream::get_class_static()), "set_terrain_palette", "get_terrain_palette");
 
     ClassDB::bind_method(D_METHOD("get_collision_layer"), &GridTerrain::get_collision_layer);
     ClassDB::bind_method(D_METHOD("set_collision_layer", "mask"), &GridTerrain::set_collision_layer);

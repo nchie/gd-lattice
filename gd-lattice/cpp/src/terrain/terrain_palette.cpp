@@ -40,24 +40,24 @@ void TerrainPalette::_get_property_list(List<PropertyInfo> *p_list) const {
 }
 
 
-Array TerrainPalette::get_property_list() const {
-    List<PropertyInfo> lpi;
-    _get_property_list(&lpi);
-    return convert_property_list(&lpi);
-}
-
-Array convert_property_list(const List<PropertyInfo> *p_list) {
-    Array va;
-    for (const List<PropertyInfo>::Element *E = p_list->front(); E; E = E->next()) {
-//        va.push_back(godot::Dictionary(E->get()));
-
-        PropertyInfo info = E->get();
-        const Dictionary value = godot::Dictionary(info);
-        va.push_back(value);
-    }
-
-    return va;
-}
+//Array TerrainPalette::get_property_list() const {
+//    List<PropertyInfo> lpi;
+//    _get_property_list(&lpi);
+//    return convert_property_list(&lpi);
+//}
+//
+//Array convert_property_list(const List<PropertyInfo> *p_list) {
+//    Array va;
+//    for (const List<PropertyInfo>::Element *E = p_list->front(); E; E = E->next()) {
+////        va.push_back(godot::Dictionary(E->get()));
+//
+//        PropertyInfo info = E->get();
+//        const Dictionary value = godot::Dictionary(info);
+//        va.push_back(value);
+//    }
+//
+//    return va;
+//}
 
 
 void TerrainPalette::_bind_methods() {
@@ -67,11 +67,39 @@ void TerrainPalette::_bind_methods() {
 //    ClassDB::bind_method(D_METHOD("get_property_list"), &TerrainPalette::_get_property_list_bind);
 
     // Properties.
+    ADD_GROUP("Test group", "group_");
+    ADD_SUBGROUP("Test subgroup", "group_subgroup_");
 
+    ClassDB::bind_method(D_METHOD("get_custom_string"), &TerrainPalette::get_custom_string);
+    ClassDB::bind_method(D_METHOD("set_custom_string", "string"), &TerrainPalette::set_custom_string);
+    ADD_PROPERTY(PropertyInfo(Variant::STRING, "group_subgroup_custom_string"), "set_custom_string", "get_custom_string");
+
+
+    ClassDB::bind_method(D_METHOD("get_custom_position"), &TerrainPalette::get_custom_position);
+    ClassDB::bind_method(D_METHOD("set_custom_position", "position"), &TerrainPalette::set_custom_position);
+    ADD_PROPERTY(PropertyInfo(Variant::VECTOR2, "group_subgroup_custom_position"), "set_custom_position", "get_custom_position");
 
     // Signals.
 
     // Constants.
+}
+
+
+// Properties.
+void TerrainPalette::set_custom_string(const godot::String &custom_string) {
+    _custom_string = custom_string;
+}
+
+godot::String TerrainPalette::get_custom_string() const {
+    return _custom_string;
+}
+
+void TerrainPalette::set_custom_position(const godot::Vector2 &pos) {
+    custom_position = pos;
+}
+
+godot::Vector2 TerrainPalette::get_custom_position() const {
+    return custom_position;
 }
 
 TerrainPalette::TerrainPalette() {
